@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	pointer2 "learn-go/pointer2"
+	structPoint "learn-go/struct"
+)
 
 func main() {
 	var i int
@@ -17,9 +21,13 @@ func main() {
 	inc(&i)
 	fmt.Println(i)
 
-	k := &[3]int{1,2,3}
+	k := &[3]int{1, 2, 3}
 	pow(k)
 	fmt.Println(k)
+
+	pointer2.PointerPrint(&i)
+	strPoint := structPoint.StructPointerReference()
+	fmt.Println(strPoint.Point)
 }
 
 func inc(p *int) {
