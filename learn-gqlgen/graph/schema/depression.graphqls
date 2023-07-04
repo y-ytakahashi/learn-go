@@ -1,0 +1,13 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Depression {
+  id: ID!
+  text: String!
+  done: Boolean!
+}
+
+extend type Query {
+  depressions: [Depression!]!
+}
